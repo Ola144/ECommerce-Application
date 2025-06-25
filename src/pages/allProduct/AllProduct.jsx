@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from "react";
 import Layout from "../../components/layout/Layout";
 import { useNavigate } from "react-router-dom";
 import myContext from "../../context/myContext";
-import Loader from "../../components/loader/loader";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
 import { toast } from "react-toastify";
@@ -11,7 +10,7 @@ function AllProduct() {
   const navigate = useNavigate();
 
   const context = useContext(myContext);
-  const { loading, getAllProduct, formatCurrency } = context;
+  const { getAllProduct, formatCurrency } = context;
 
   const cartItems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -28,7 +27,6 @@ function AllProduct() {
   return (
     <Layout>
       <div className="py-5">
-        {loading && <Loader />}
         <div className="">
           <h3 className="text-center mb-5 text-2xl font-semibold">
             All Products
