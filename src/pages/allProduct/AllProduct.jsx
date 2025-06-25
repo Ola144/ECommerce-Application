@@ -5,12 +5,13 @@ import myContext from "../../context/myContext";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
 import { toast } from "react-toastify";
+import Loader from "../../components/loader/loader";
 
 function AllProduct() {
   const navigate = useNavigate();
 
   const context = useContext(myContext);
-  const { getAllProduct, formatCurrency } = context;
+  const { loading, getAllProduct, formatCurrency } = context;
 
   const cartItems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -26,6 +27,7 @@ function AllProduct() {
 
   return (
     <Layout>
+      {loading && <Loader />}
       <div className="py-5">
         <div className="">
           <h3 className="text-center mb-5 text-2xl font-semibold">
