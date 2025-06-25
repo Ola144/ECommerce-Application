@@ -15,8 +15,8 @@ import UpdateProductPage from "./components/admin/UpdateProductPage";
 import { ProtectedRouteForUser } from "./protectedRoute/ProtectedRouteForUser";
 import { ProtectedRouteForAdmin } from "./protectedRoute/ProtectedRouteForAdmin";
 import CategoryPage from "./pages/category/CategoryPage";
-import ScrollTop from "./components/scrollTop/scrollTop";
 import MyState from "./context/myState";
+import ScrollTop from "./components/scrollTop/scrollTop";
 
 function App() {
   return (
