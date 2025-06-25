@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import MyContext from "../../context/myContext";
+import MyContext from "../../context/useMyContext";
 import Loader from "../loader/loader";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";

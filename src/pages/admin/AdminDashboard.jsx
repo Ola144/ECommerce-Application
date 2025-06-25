@@ -3,7 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import ProductDetails from "../../components/admin/ProductDetails";
 import OrderDetails from "../../components/admin/OrderDetails";
 import UserDetail from "../../components/admin/UserDetail";
-import MyContext from "../../context/myContext";
+import MyContext from "../../context/useMyContext";
 import Layout from "../../components/layout/Layout";
 
 function AdminDashboard() {

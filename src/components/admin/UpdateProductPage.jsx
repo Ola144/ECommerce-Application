@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import MyContext from "../../context/myContext";
+import MyContext from "../../context/useMyContext";
 import { doc, getDoc, setDoc, Timestamp } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { fireDB } from "../../firebase/FirebaseConfig";

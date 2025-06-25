@@ -1,7 +1,7 @@
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import SearchBar from "../searchBar/SearchBar";
 // import { useContext } from "react";
-import MyContext from "../../context/myContext";
+import MyContext from "../../context/useMyContext";
 import { useSelector } from "react-redux";
 
 const Navbar = () => {

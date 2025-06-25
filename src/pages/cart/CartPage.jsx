@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import Layout from "../../components/layout/Layout";
-import MyContext from "../../context/myContext";
+import MyContext from "../../context/useMyContext";
 import { useDispatch, useSelector } from "react-redux";
 import {
   decrementQuantity,

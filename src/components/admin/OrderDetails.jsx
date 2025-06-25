@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import MyContext from "../../context/myContext";
+import MyContext from "../../context/useMyContext";
 
 function OrderDetails() {
   const context = useContext(MyContext);
@@ -116,7 +116,10 @@ function OrderDetails() {
                           <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-slate-500 first-letter:uppercase">
                             {order.email}
                           </td>
-                          <td className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-red-600 text-lg cursor-pointer" onClick={() => deleteOrder(order.id)}>
+                          <td
+                            className="h-12 px-6 text-md transition duration-300 border-t border-l first:border-l-0 border-pink-100 stroke-slate-500 text-red-600 text-lg cursor-pointer"
+                            onClick={() => deleteOrder(order.id)}
+                          >
                             <i className="fa fa-trash"></i>
                           </td>
                         </tr>

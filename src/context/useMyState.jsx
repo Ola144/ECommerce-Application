@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import MyContext from "./myContext";
+// eslint-disable-next-line no-unused-vars
+import useMyContext from "./useMyContext";
 import {
   collection,
   deleteDoc,
@@ -225,7 +226,7 @@ function useMyState({ children }) {
   // };
 
   return (
-    <MyContext.Provider
+    <useMyContext.Provider
       value={{
         loading,
         setLoading,
@@ -239,7 +240,7 @@ function useMyState({ children }) {
       }}
     >
       {children}
-    </MyContext.Provider>
+    </useMyContext.Provider>
   );
 }
 
