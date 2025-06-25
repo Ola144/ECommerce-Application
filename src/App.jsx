@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
 import NoPage from "./pages/noPage/NoPage";
 import ProductInfo from "./pages/productInfo/ProductInfo";
-import ScrollTop from "./components/scrollTop/scrollTop";
 import CartPage from "./pages/cart/CartPage";
 import AllProduct from "./pages/allProduct/AllProduct";
 import Signup from "./pages/registration/Signup";
@@ -17,6 +16,7 @@ import MyState from "./context/myState";
 import { ProtectedRouteForUser } from "./protectedRoute/ProtectedRouteForUser";
 import { ProtectedRouteForAdmin } from "./protectedRoute/ProtectedRouteForAdmin";
 import CategoryPage from "./pages/category/CategoryPage";
+import ScrollTop from "./components/scrollTop/scrollTop";
 
 function App() {
   return (
