@@ -15,7 +15,7 @@ import { ProtectedRouteForAdmin } from "./protectedRoute/ProtectedRouteForAdmin"
 import CategoryPage from "./pages/category/CategoryPage";
 
 // eslint-disable-next-line no-unused-vars
-import useScrollTop from "./components/scrollTop/scrollTop";
+import useScrollTop from "./components/scrollTop/useScrollTop";
 // eslint-disable-next-line no-unused-vars
 import useMyState from "./context/myState";
 
