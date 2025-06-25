@@ -75,7 +75,6 @@ function MyState({ children }) {
 
   // User State
   const [getAllUser, setGetAllUser] = useState([]);
-  console.log(getAllUser);
 
   // GET ALL USER FUNCTIION
   const getAllUserFunction = async () => {
