@@ -1,5 +1,3 @@
-import { Button } from "@material-tailwind/react";
-import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/home/HomePage";
 import NoPage from "./pages/noPage/NoPage";
@@ -15,13 +13,15 @@ import UpdateProductPage from "./components/admin/UpdateProductPage";
 import { ProtectedRouteForUser } from "./protectedRoute/ProtectedRouteForUser";
 import { ProtectedRouteForAdmin } from "./protectedRoute/ProtectedRouteForAdmin";
 import CategoryPage from "./pages/category/CategoryPage";
-import MyState from "./context/myState";
+
 import ScrollTop from "./components/scrollTop/scrollTop";
+// eslint-disable-next-line no-unused-vars
+import useMyState from "./context/myState";
 
 function App() {
   return (
     <div>
-      <MyState>
+      <useMyState>
         <Router>
           <ScrollTop />
           <Routes>
@@ -71,7 +71,7 @@ function App() {
             <Route path="*" element={<NoPage />}></Route>
           </Routes>
         </Router>
-      </MyState>
+      </useMyState>
     </div>
   );
 }

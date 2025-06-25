@@ -12,7 +12,7 @@ import {
 import { fireDB } from "../firebase/FirebaseConfig";
 import { toast } from "react-toastify";
 
-function MyState({ children }) {
+function useMyState({ children }) {
   const [loading, setLoading] = useState(false);
 
   // GET ALL PRODUCTS
@@ -243,4 +243,4 @@ function MyState({ children }) {
   );
 }
 
-export default MyState;
+export default useMyState;
