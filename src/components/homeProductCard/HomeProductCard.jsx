@@ -64,7 +64,7 @@ function HomeProductCard() {
                       <div className="flex justify-center mt-2">
                         {cartItems.find((p) => p.id === item.id) ? (
                           <button
-                            className="bg-gray-500 w-full text-white py-[4px] rounded-lg font-bold"
+                            className="bg-gray-500 w-full text-white py-[4px] rounded-lg font-bold cursor-pointer"
                             disabled
                           >
                             Already In The Cart
