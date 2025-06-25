@@ -12,11 +12,11 @@ import UserDashboard from "./pages/user/UserDashboard";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AddProductPage from "./components/admin/AddProductPage";
 import UpdateProductPage from "./components/admin/UpdateProductPage";
-import MyState from "./context/myState";
 import { ProtectedRouteForUser } from "./protectedRoute/ProtectedRouteForUser";
 import { ProtectedRouteForAdmin } from "./protectedRoute/ProtectedRouteForAdmin";
 import CategoryPage from "./pages/category/CategoryPage";
 import ScrollTop from "./components/scrollTop/scrollTop";
+import MyState from "./context/myState";
 
 function App() {
   return (
