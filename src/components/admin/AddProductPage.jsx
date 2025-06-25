@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import MyContext from "../../context/useMyContext";
+import myContext from "../../context/myContext";
 import { addDoc, collection, Timestamp } from "firebase/firestore";
 import { toast } from "react-toastify";
 import { fireDB } from "../../firebase/FirebaseConfig";
@@ -34,7 +34,7 @@ const categoryList = [
 ];
 
 function AddProductPage() {
-  const context = useContext(MyContext);
+  const context = useContext(myContext);
   const { loading, setLoading } = context;
 
   // Nativate

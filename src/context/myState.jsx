@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-// eslint-disable-next-line no-unused-vars
-import useMyContext from "./useMyContext";
+import MyContext from "./myContext";
 import {
   collection,
   deleteDoc,
@@ -13,7 +12,7 @@ import {
 import { fireDB } from "../firebase/FirebaseConfig";
 import { toast } from "react-toastify";
 
-function useMyState({ children }) {
+function MyState({ children }) {
   const [loading, setLoading] = useState(false);
 
   // GET ALL PRODUCTS
@@ -226,7 +225,7 @@ function useMyState({ children }) {
   // };
 
   return (
-    <useMyContext.Provider
+    <MyContext.Provider
       value={{
         loading,
         setLoading,
@@ -240,8 +239,8 @@ function useMyState({ children }) {
       }}
     >
       {children}
-    </useMyContext.Provider>
+    </MyContext.Provider>
   );
 }
 
-export default useMyState;
+export default MyState;

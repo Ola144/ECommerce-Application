@@ -3,12 +3,12 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import ProductDetails from "../../components/admin/ProductDetails";
 import OrderDetails from "../../components/admin/OrderDetails";
 import UserDetail from "../../components/admin/UserDetail";
-import useMyContext from "../../context/useMyContext";
+import myContext from "../../context/myContext";
 import Layout from "../../components/layout/Layout";
 
 function AdminDashboard() {
   const user = JSON.parse(localStorage.getItem("users"));
-  const context = useContext(useMyContext);
+  const context = useContext(myContext);
   const { getAllProduct, getAllOrder, getAllUser } = context;
 
   return (

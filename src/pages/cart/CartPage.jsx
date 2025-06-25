@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import Layout from "../../components/layout/Layout";
-import useMyContext from "../../context/useMyContext";
+import myContext from "../../context/myContext";
 import { useDispatch, useSelector } from "react-redux";
 import {
   decrementQuantity,
@@ -14,7 +14,7 @@ import { fireDB } from "../../firebase/FirebaseConfig";
 import { Navigate } from "react-router-dom";
 
 function CartPage() {
-  const context = useContext(useMyContext);
+  const context = useContext(myContext);
   const { formatCurrency } = context;
 
   const dispatch = useDispatch();

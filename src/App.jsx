@@ -13,18 +13,15 @@ import UpdateProductPage from "./components/admin/UpdateProductPage";
 import { ProtectedRouteForUser } from "./protectedRoute/ProtectedRouteForUser";
 import { ProtectedRouteForAdmin } from "./protectedRoute/ProtectedRouteForAdmin";
 import CategoryPage from "./pages/category/CategoryPage";
-
-// eslint-disable-next-line no-unused-vars
-import useScrollTop from "./components/scrollTop/useScrollTop";
-// eslint-disable-next-line no-unused-vars
-import useMyState from "./context/useMyState";
+import UseScrollTop from "./components/scrollTop/useScrollTop";
+import MyState from "./context/myState";
 
 function App() {
   return (
     <div>
-      <useMyState>
+      <MyState>
         <Router>
-          <useScrollTop />
+          <UseScrollTop />
           <Routes>
             <Route path="/" element={<HomePage />}></Route>
             <Route path="/productInfo/:id" element={<ProductInfo />}></Route>
@@ -72,7 +69,7 @@ function App() {
             <Route path="*" element={<NoPage />}></Route>
           </Routes>
         </Router>
-      </useMyState>
+      </MyState>
     </div>
   );
 }

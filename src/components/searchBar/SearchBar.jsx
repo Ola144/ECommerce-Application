@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import useMyContext from "../../context/useMyContext";
+import useMyContext from "../../context/myContext";
 import { useNavigate } from "react-router-dom";
 
 function SearchBar() {
@@ -42,7 +42,7 @@ function SearchBar() {
   // ];
 
   const context = useContext(useMyContext);
-  const { getAllProduct } = context;
+  const { getAllProduct } = context || {};
 
   const [search, setSearch] = useState("");
 
