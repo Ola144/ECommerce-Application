@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import Layout from "../../components/layout/Layout";
 import { useNavigate } from "react-router-dom";
-import MyContext from "../../context/useMyContext";
+import useMyContext from "../../context/useMyContext";
 import Loader from "../../components/loader/loader";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
@@ -10,7 +10,7 @@ import { toast } from "react-toastify";
 function AllProduct() {
   const navigate = useNavigate();
 
-  const context = useContext(MyContext);
+  const context = useContext(useMyContext);
   const { loading, getAllProduct, formatCurrency } = context;
 
   const cartItems = useSelector((state) => state.cart);

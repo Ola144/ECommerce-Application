@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import Layout from "../../components/layout/Layout";
 import { useNavigate, useParams } from "react-router-dom";
-import MyContext from "../../context/useMyContext";
+import useMyContext from "../../context/useMyContext";
 import Loader from "../../components/loader/loader";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 
 function CategoryPage() {
   const { categoryname } = useParams();
-  const context = useContext(MyContext);
+  const context = useContext(useMyContext);
   const { getAllProduct, loading, formatCurrency } = context;
 
   const navigate = useNavigate();

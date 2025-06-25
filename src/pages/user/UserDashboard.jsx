@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import Layout from "../../components/layout/Layout";
-import MyContext from "../../context/useMyContext";
+import useMyContext from "../../context/useMyContext";
 import Loader from "../../components/loader/loader";
 
 function UserDashboard() {
   const user = JSON.parse(localStorage.getItem("users"));
   // console.log(user);
 
-  const context = useContext(MyContext);
+  const context = useContext(useMyContext);
   const { loading, getAllOrder, formatCurrency } = context;
 
   return (

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import MyContext from "../../context/useMyContext";
+import useMyContext from "../../context/useMyContext";
 import Loader from "../loader/loader";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 function HomeProductCard() {
   const navigate = useNavigate();
 
-  const context = useContext(MyContext);
+  const context = useContext(useMyContext);
   const { loading, getAllProduct, formatCurrency } = context;
 
   const dispatch = useDispatch();
